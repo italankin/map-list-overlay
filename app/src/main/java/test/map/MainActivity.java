@@ -192,6 +192,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
             });
         }
+        if (filtered.size() < 2) {
+            return;
+        }
         final int padding = getResources().getDimensionPixelSize(R.dimen.margin);
         if (mapView.getMeasuredWidth() == 0) {
             ViewTreeObserver vto = mapView.getViewTreeObserver();
