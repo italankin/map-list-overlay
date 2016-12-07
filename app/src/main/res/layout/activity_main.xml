@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test.map.MySlidingLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:sl_offset="100dp"
+    tools:context="test.map.MainActivity">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#fefefe"
+            android:elevation="2dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/filter1"
+                style="@style/MyButton"
+                android:src="@drawable/ic_local_dining"/>
+
+            <ImageView
+                android:id="@+id/filter2"
+                style="@style/MyButton"
+                android:src="@drawable/ic_local_gas_station"/>
+
+            <ImageView
+                android:id="@+id/filter3"
+                style="@style/MyButton"
+                android:src="@drawable/ic_local_hospital"/>
+
+            <FrameLayout
+                android:id="@+id/btn_toggle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button">
+
+                <ImageView
+                    android:id="@+id/image_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_expand_more_32dp"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            tools:listitem="@android:layout/simple_list_item_1"/>
+
+    </LinearLayout>
+
+</test.map.MySlidingLayout>
